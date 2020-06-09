@@ -1,0 +1,125 @@
+#featured {
+    display: flex;
+    align-items: stretch;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+#primaryContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 1.2rem;
+}
+
+#primaryContent .primaryHeadline {
+    width: 100%;
+}
+
+#primaryContent .primaryHeadline h3{
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+    text-align: center;
+    margin-bottom: .6rem;
+}
+
+#primaryContent .supportingContent {
+    flex: 1 1 230px;
+    display: flex;
+    flex-direction: column;
+    padding-right: .5rem;
+    margin-top: .6rem;
+}
+
+#primaryContent .supportingContent h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0 .5rem 2.5rem 0;
+}
+
+#primaryContent .primaryImage {
+    flex: 2 1 460px;
+    margin-top: .6rem;
+}
+
+#primaryContent .primaryImage .poster button{
+    padding: 0;
+    border: 0;
+}
+
+#primaryContent .primaryImage .poster button img{
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: #fff;
+    color: #000;
+    margin-bottom: .5rem;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.card .headline {
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35rem;
+    margin-top: .5rem;
+}
+
+.card .headline:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.card.cardTop{
+    margin: 0.5rem;
+}
+
+.card.cardText{
+    display: block;
+    margin-left: 1px;
+    position: relative;
+    margin: 0 1.2rem 0 0;
+    padding: 1.2rem 0;
+} 
+
+.card.cardText::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 192px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.label{
+    float: left;
+    line-height: 1.25rem;
+    font-size: .8rem;
+    font-weight: 700;
+    padding: 2px 10px 0 0;
+}
+
+.labelText {
+    color: #e60505;
+    text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+    #primaryContent .primaryImage {
+        order: 1;
+    }
+
+    #primaryContent .primaryHeadline {
+        order: 2;
+    }
+
+    #primaryContent .supportingContent {
+        order: 3;
+    }
+}
